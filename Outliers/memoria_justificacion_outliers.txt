@@ -1,0 +1,25 @@
+========================================================
+   REPORTE DE JUSTIFICACIÓN DE TRATAMIENTO DE OUTLIERS  
+========================================================
+
+1. METODOLOGÍA EMPLEADA:
+Se emplea Winsorización (capping) en el percentil 99.95 del tiempo de estancia (LOS) y variables indicadoras (flags). No se imputan outliers por la media para evitar deformar la distribución asimétrica.
+
+2. ESTADÍSTICAS LOS_MIN:
+- Total registros: 254025
+- Máximo original: 1018240.00 min (16970.67 h)
+- Umbral p99.95: 1460.00 min (24.33 h)
+- Outliers detectados: 127 (0.0500% del total)
+
+3. ESTADÍSTICAS TRIAGE_DELAY_MIN:
+- Máximo original: 1407.82 min
+- Umbral p99.95: 159.83 min
+- Outliers detectados: 120
+
+4. NOTA SOBRE OCUPACIÓN:
+La variable LOS_MIN_CAP_99_95 se utiliza únicamente para cálculos de ocupación simultánea (pacientes activos). Los valores originales se conservan.
+
+5. ARCHIVOS GENERADOS (ANEXOS):
+- diagnosticos_paso1\justificacion_outliers_LOS.png
+- diagnosticos_paso1\justificacion_outliers_LOS_zoom_0_2000.png
+- diagnosticos_paso1\top10_outliers_LOS.csv
